@@ -9,9 +9,10 @@ Claude Code mod that shows your extra-usage credits in the status line, e.g. `us
 - Costs no tokens: it is a plain data read, no model call.
 
 ## Install
+Run the following commands in your claude code chat to add the marketplace and install the plugin:
 ```
-claude plugin marketplace add ~/Documents/code/cc-mods/cc-credit-status
-claude plugin install usage@cc-credit-status --scope user
+/plugin marketplace add 0phoff/cc-credit-status
+/plugin install credit-status@cc-credit-status
 ```
 
 ## Notes

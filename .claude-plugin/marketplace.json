@@ -3,6 +3,6 @@
   "description": "Claude Code status line mod showing extra-usage credits",
   "owner": { "name": "0phoff" },
   "plugins": [
-    { "name": "usage", "source": "./", "description": "Shows extra-usage spend as 'spent / limit' in the status line" }
+    { "name": "credit-status", "source": "./", "description": "Shows extra-usage spend as 'spent / limit' in the status line" }
   ]
 }
