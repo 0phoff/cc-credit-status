@@ -1,19 +1,12 @@
-# cc-credit-status
-
-Claude Code mod that shows your extra-usage credits in the status line, e.g.:
-
-    usage 18.25 / 100
+# Credit Status
+Claude Code mod that shows your extra-usage credits in the status line, e.g. `usage 18.25 / 100`.
 
 ## What it does
-- Reads `plan.extraUsage` (spent / monthly limit) from the app's `get_usage` tool
-  via `$.mcp.call('ccd_session_mgmt', 'get_usage')`.
-- Refreshes on session start, after each turn, on each prompt, when a client attaches
-  (switching back to a session), and every minute.
-- On a prompt, attach or session start, the last known value (or `usage …`) shows
-  immediately in the status line and is refreshed in the background.
-- `/credits` forces a refresh now; the value shows in the status line, and the command only prints if something went wrong.
+- Reads `plan.extraUsage` (spent / monthly limit) from the app's `get_usage` tool via `$.mcp.call('ccd_session_mgmt', 'get_usage')`.
+- Refreshes on session start, after each turn, on each prompt, when a client attaches (switching back to a session), and every minute.
+- On a prompt, attach or session start, the last known value (or `usage …`) shows immediately in the status line and is refreshed in the background.
+- `/credits` forces a refresh now; the value shows in the status line, or the command prints if something went wrong.
 - Costs no tokens: it is a plain data read, no model call.
-- Shows nothing if extra usage is disabled, `usage: n/a` if the read fails.
 
 ## Install
 ```
